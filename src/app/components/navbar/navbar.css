@@ -1,0 +1,47 @@
+nav{
+  background-color: rgb(248 249 250);
+}
+
+#navbarText{
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 500ms ease;
+}
+
+@media (max-width:1024px) {
+  .max-lg{
+    width: 100%;
+  }
+
+  #navbarText ul{
+    display: flex;
+    flex-direction: column;
+
+  }
+  #navbarText ul li{
+    padding: 0rem 0.75rem;
+    width: 100%;
+  }
+  #navbarText ul li a{
+    display: block;
+    padding-inline: 0;
+    width: 100%;
+  }
+  #navbarText ul li a.language{
+    display: inline;
+    padding-inline: 0;
+    width: fit-content;
+  }
+
+}
+
+@media (min-width: 1025px) {
+  #navbarText{
+    max-height: none;
+    overflow: visible;
+  }
+}
+
+#navbarText.show{
+  max-height: 500px;
+}
