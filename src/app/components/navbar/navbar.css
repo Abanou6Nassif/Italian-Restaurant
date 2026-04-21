@@ -8,7 +8,7 @@ nav{
   transition: max-height 500ms ease;
 }
 
-@media (max-width:1024px) {
+@media (max-width:1023px) {
   .max-lg{
     width: 100%;
   }
@@ -28,14 +28,14 @@ nav{
     width: 100%;
   }
   #navbarText ul li a.language{
-    display: inline;
+    /* display: inline; */
     padding-inline: 0;
     width: fit-content;
   }
 
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
   #navbarText{
     max-height: none;
     overflow: visible;
