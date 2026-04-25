@@ -1,1 +1,26 @@
-<p>benvenuti works!</p>
+<section class="merienda">
+  <div>
+    <div class="relative text-center mt-16">
+      <img [src]="slides[currentIndex()]" alt="" class="">
+      <div class="caption text-[2rem] absolute top-[50%] left-[50%] text-white flex flex-col items-center translate-x-[-50%] translate-y-[-50%]">
+        <h2>{{captions[currentIndex()]}}</h2>
+        <p>...</p>
+      </div>
+      <div class="absolute top-[50%] left-[50%] text-white/50 flex justify-between w-full translate-x-[-50%] translate-y-[-50%] text-2xl font-semibold">
+        <span (click)="prev()" class="w-[15%] flex justify-center hover:text-white cursor-pointer"><i class="fa-solid fa-angle-left"></i></span>
+        <span (click)="next()" class="w-[15%] flex justify-center hover:text-white cursor-pointer"><i class="fa-solid fa-angle-right"></i></span>
+      </div>
+
+      <div class="pagination-container flex gap-2 justify-center absolute bottom-7 left-[50%] translate-x-[-50%] translate-y-[-50%]">
+        <!-- [attr.data-page-index]="i" the attr here used to bind a value to a plain html attribute -->
+         <!-- let i = $index this an index provided from angular itself  -->
+        @for (slide of slides; track slide; let i = $index) {
+          <span (click)="setExactImg(i)" class="pagination w-8 h-0.5 cursor-pointer" [class]="i === currentIndex() ? 'bg-white' : 'bg-white/50'" [attr.data-page-index]="i" ></span>
+        }@empty {
+          <p>No slides available</p>
+        }
+      </div>
+    </div>
+  </div>
+
+</section>

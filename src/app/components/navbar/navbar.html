@@ -1,15 +1,23 @@
-<nav class="py-1.5 px-4 lg:flex justify-between items-center fixed top-0 left-0 right-0">
+<nav class="py-1.5 px-4 lg:flex justify-between items-center fixed top-0 left-0 right-0 z-100">
   <div class="flex items-center justify-between max-lg">
-  <a class="flex justify-start items-center gap-2 py-1.25 text-[20px] merienda cursor-pointer">
-    <img src="it/images/logo.png" alt="logo" class="h-12.5 w-12.5" />
-    Italian Restaurant
-  </a>
-  <span class="px-3 py-1 border rounded text-[20px] text-black/50 lg:hidden" id="toggle-menu" (click)="toggleMenu()"><i class="fa-solid fa-bars"></i></span>
+    <a class="flex justify-start items-center gap-2 py-1.25 text-[20px] merienda cursor-pointer">
+      <img src="it/images/logo.png" alt="logo" class="h-12.5 w-12.5" />
+      Italian Restaurant
+    </a>
+    <span
+      class="px-3 py-1 border rounded text-[20px] text-black/50 lg:hidden"
+      id="toggle-menu"
+      (click)="toggleMenu()"
+      ><i class="fa-solid fa-bars"></i
+    ></span>
   </div>
-  <div class="merienda text-[15px] sm:max-h-0 lg:max-h-auto overflow-hidden lg:flex lg:items-center" id="navbarText">
+  <div
+    class="merienda text-[15px] sm:max-h-0 lg:max-h-auto overflow-hidden lg:flex lg:items-center"
+    id="navbarText"
+  >
     <ul class="lg:flex justify-evenly text-black/50">
       <li class="px-3 hover:text-black/90 active:hover:text-black/90" appBgGray>
-        <a class="p-2 transition-all" [routerLink]="[]" fragment="benvenuti">Benvenuti</a>
+        <a class="p-2 transition-all activelink" [routerLink]="[]" fragment="benvenuti">Benvenuti</a>
       </li>
       <li class="px-3 hover:text-black/90 active:hover:text-black/90" appBgGray>
         <a class="p-2 transition-all" [routerLink]="[]" fragment="ristorante">Ristorante</a>
@@ -24,10 +32,10 @@
         <a class="p-2 transition-all" [routerLink]="[]" fragment="dove-siamo">Dove Siamo</a>
       </li>
       <li class="flex gap-2 lg:gap-0 items-center justify-start px-3">
-        <a  class="language px-2" rel="en-En"
+        <a class="language px-2" rel="en-En"
           ><img src="it/images/english.ico" class="flag max-h-5 max-w-5" alt="English"
         /></a>
-        <a  class="language px-2" rel="it-IT"
+        <a class="language px-2" rel="it-IT"
           ><img src="it/images/italy.ico" class="flag max-h-5 max-w-5" alt="Italiano"
         /></a>
       </li>

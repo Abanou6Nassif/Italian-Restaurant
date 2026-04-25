@@ -6,4 +6,5 @@ import { Component } from '@angular/core';
   templateUrl: './prenotazione.html',
   styleUrl: './prenotazione.css',
 })
-export class Prenotazione {}
+export class Prenotazione {
+}

@@ -1,1 +1,125 @@
-<p>prenotazione works!</p>
+<section class="mx-auto merienda flex justify-center flex-col items-center text-[0.9375rem]">
+  <div class="px-3.75 pt-18.75 pb-5">
+    <h2 class="text-center text-[2rem]">~ Reservation ~</h2>
+  </div>
+
+  <div class="flex justify-center flex-col md:flex-row lg:max-w-285 -mx-3.75">
+    <div class="w-full" data-aos="slide-up" data-aos-duration="1200" data-aos-easing="ease">
+      <img
+        src="it/images/prenota.jpg"
+        alt="reservation"
+        class="mx-h-[750px] opacity-40 max-w-full"
+      />
+
+      <div class="absolute top-[40%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-full">
+        <h1 class="text-center text-[2.5rem]">Timetables</h1>
+        <div class="flex flex-wrap justify-between items-center w-full">
+          <div class="relative basis-[50%] shrink-0 grow-0">
+            <h2 class="text-center text-[2rem]">Lunch</h2>
+            <h5 class="text-center text-[1.25rem]">12:00 - 15:00</h5>
+          </div>
+          <div class="relative basis-[50%] shrink-0 grow-0">
+            <h2 class="text-center text-[2rem]">Dinner</h2>
+            <h5 class="text-center text-[1.25rem]">19:30 - 23:30</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br />
+
+  <div
+    class="flex justify-center w-full flex-col md:flex-row lg:max-w-285 -mx-3.75 text-left font-normal"
+  >
+    <div class="px-3.75 w-full bg-[#f8f9fa]">
+      <form class="flex justify-between w-full">
+        <div class="w-[50%] text-left -mx-1.25">
+          <div class="flex px-1.25 flex-col mb-4">
+            <h3 class="text-[1.75rem]">Reserve</h3>
+            <label class="mb-2" for="inputDate"> Date</label>
+            <input
+              type="date"
+              class="w-full text-[1rem] leading-normal block py-1.5 px-3 text-[#495057] bg-white border border-solid border-[#ced4da] rounded-sm transition-[border-color,box-shadow] duration-150 ease-in-out focus:border-[#80bdff] focus:outline-0 focus:shadow-[0_0_0_.2rem_rgba(0,123,255,.25)]"
+              id="inputDate"
+              placeholder="Data gg/mm/aaaa"
+            />
+          </div>
+
+          <div class="flex px-1.25 flex-col mb-4">
+            <label class="mb-2" for="inputTime"> Timetables</label>
+            <input
+              type="time"
+              class="w-full text-[1rem] leading-normal block py-1.5 px-3 text-[#495057] bg-white border border-solid border-[#ced4da] rounded-sm transition-[border-color,box-shadow] duration-150 ease-in-out focus:border-[#80bdff] focus:outline-0 focus:shadow-[0_0_0_.2rem_rgba(0,123,255,.25)]"
+              id="inputTime"
+              placeholder="Timetables"
+            />
+          </div>
+
+          <div class="flex px-1.25 flex-col mb-4">
+            <label class="mb-2" for="inputNumber"> Number of Guests</label>
+            <input
+              type="number"
+              class="w-full text-[1rem] leading-normal block py-1.5 px-3 text-[#495057] bg-white border border-solid border-[#ced4da] rounded-sm transition-[border-color,box-shadow] duration-150 ease-in-out focus:border-[#80bdff] focus:outline-0 focus:shadow-[0_0_0_.2rem_rgba(0,123,255,.25)]"
+              id="inputNumber"
+              placeholder="Number of Guests"
+            />
+          </div>
+        </div>
+
+        <div class="right w-[50%] text-left">
+          <div class="flex px-1.25 flex-col mb-4">
+            <h3 class="text-[1.75rem]">Details</h3>
+            <label class="mb-2" for="inputName"> Name</label>
+            <input
+              type="text"
+              class="w-full text-[1rem] leading-normal block py-1.5 px-3 text-[#495057] bg-white border border-solid border-[#ced4da] rounded-sm transition-[border-color,box-shadow] duration-150 ease-in-out focus:border-[#80bdff] focus:outline-0 focus:shadow-[0_0_0_.2rem_rgba(0,123,255,.25)]"
+              id="inputName"
+              placeholder="Name"
+            />
+          </div>
+
+          <div class="flex px-1.25 flex-col mb-4">
+            <label class="mb-2" for="inputEmail"> Email</label>
+            <input
+              type="email"
+              class="w-full text-[1rem] leading-normal block py-1.5 px-3 text-[#495057] bg-white border border-solid border-[#ced4da] rounded-sm transition-[border-color,box-shadow] duration-150 ease-in-out focus:border-[#80bdff] focus:outline-0 focus:shadow-[0_0_0_.2rem_rgba(0,123,255,.25)]"
+              id="inputEmail"
+              placeholder="Email"
+            />
+          </div>
+
+          <div class="flex px-1.25 flex-col mb-4">
+            <label class="mb-2" for="inputCel"> Phone</label>
+            <input
+              type="tel"
+              class="w-full text-[1rem] leading-normal block py-1.5 px-3 text-[#495057] bg-white border border-solid border-[#ced4da] rounded-sm transition-[border-color,box-shadow] duration-150 ease-in-out focus:border-[#80bdff] focus:outline-0 focus:shadow-[0_0_0_.2rem_rgba(0,123,255,.25)]"
+              id="inputCel"
+              placeholder="Phone"
+            />
+          </div>
+        </div>
+      </form>
+      <div class="w-full text-left -mx-1.25">
+        <label class="mb-2" for="inputComment"> Further requests</label>
+        <textarea
+          class="w-full text-[1rem] leading-normal block py-1.5 px-3 mb-4 text-[#495057] bg-white border border-solid border-[#ced4da] rounded-sm transition-[border-color,box-shadow] duration-150 ease-in-out focus:border-[#80bdff] focus:outline-0 focus:shadow-[0_0_0_.2rem_rgba(0,123,255,.25)]"
+          id="inputComment"
+          placeholder="Further requests"
+          rows="4"
+        ></textarea>
+      </div>
+
+      <div class="w-full text-left -mx-1.25 pb-3.75">
+        <div class="shrink-0 grow-0 max-w-[33.333333%]">
+          <button
+            class="text-white bg-[#6c757d] border-[#6c757d] w-full text-[1rem] leading-normal block py-1.5 px-3 border border-solid rounded-sm transition-[color,border-color,box-shadow,background-color] duration-150 ease-in-out hover:bg-[#5a6268] hover:border-[#545b62]"
+            type="submit"
+          >
+            Reserve
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,22 +1,29 @@
-import { Directive, ElementRef, HostListener } from '@angular/core';
+import { Directive, ElementRef, HostListener, OnChanges, Input } from '@angular/core';
 
 @Directive({
   selector: '[appBgGray]',
 })
-export class BgGray {
-  constructor(private elem:ElementRef) {
+export class BgGray implements OnChanges {
+  @Input() condition: boolean = true
+  constructor(private elem: ElementRef) {
 
   }
+  ngOnChanges(): void {
 
-  @HostListener('click') active(){
-    Array.from(this.elem.nativeElement.parentElement.children).forEach((element:any) => {
-      // element.children[0].style.backgroundColor='';
-      // element.children[0].style.color='';
+
+    if (this.condition) {
+      Array.from(this.elem.nativeElement.parentElement.children).forEach((element: any) => {
+        element.querySelector('a').classList.remove('activelink');
+      });
+      this.elem.nativeElement.querySelector('a').classList.add('activelink');
+    }
+  }
+
+
+  @HostListener('click') active() {
+    Array.from(this.elem.nativeElement.parentElement.children).forEach((element: any) => {
       element.querySelector('a').classList.remove('activelink');
     });
-    // this.elem.nativeElement.parentElement.children.style.color='';
-    // this.elem.nativeElement.children[0].style.backgroundColor = 'lightgray';
-    // this.elem.nativeElement.children[0].style.color = 'rgba(0,0,0,9)';
-     this.elem.nativeElement.querySelector('a').classList.add('activelink');
+    this.elem.nativeElement.querySelector('a').classList.add('activelink');
   }
 }
