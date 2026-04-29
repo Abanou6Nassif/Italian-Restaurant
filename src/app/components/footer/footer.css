@@ -1,0 +1,27 @@
+footer {
+	border-top: 1px solid rgba(74, 52, 37, 0.12);
+}
+
+.footer-disclaimer {
+	margin: 0.75rem 1rem 0;
+	padding: 0.9rem 1rem;
+	border-radius: 0.9rem;
+	background: linear-gradient(135deg, rgba(111, 78, 55, 0.12), rgba(248, 249, 250, 0.96));
+	border: 1px solid rgba(111, 78, 55, 0.18);
+	color: #4a3425;
+	text-align: center;
+}
+
+.footer-disclaimer__label {
+	margin: 0;
+	font-size: 0.75rem;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+}
+
+.footer-disclaimer__text {
+	margin: 0.35rem 0 0;
+	font-size: 0.95rem;
+	line-height: 1.5;
+}
