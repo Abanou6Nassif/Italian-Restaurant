@@ -1,5 +1,4 @@
-import { AfterViewInit, Component, signal, ElementRef } from '@angular/core';
-import AOS from 'aos';
+import { AfterViewInit, Component, signal } from '@angular/core';
 import { Navbar } from './components/navbar/navbar';
 import { Footer } from './components/footer/footer';
 import { Benvenuti } from './components/benvenuti/benvenuti';
@@ -7,6 +6,7 @@ import { Ristorante } from './components/ristorante/ristorante';
 import { Menu } from './components/menu/menu';
 import { Prenotazione } from './components/prenotazione/prenotazione';
 import { DoveSiamo } from './components/dove-siamo/dove-siamo';
+import Aos from 'aos';
 
 @Component({
   selector: 'app-root',
@@ -15,16 +15,11 @@ import { DoveSiamo } from './components/dove-siamo/dove-siamo';
   styleUrl: './app.css'
 })
 export class App implements AfterViewInit {
-  // private intersectionObserver?: IntersectionObserver
-  // activeNav?: string
   protected readonly title = signal('italian_restaurant');
 
-  constructor(private elem:ElementRef){
-
-  }
   ngAfterViewInit(): void {
-    AOS.init();
-    // AOS.init({
+    Aos.init();
+    // Aos.init({
     //   duration: 1200,
     //   easing: 'ease',
     //   once: false,
@@ -32,28 +27,9 @@ export class App implements AfterViewInit {
     // });
 
     // Ensure dynamically rendered children are discovered after first paint.
-    // requestAnimationFrame(() => AOS.refreshHard());
+    // requestAnimationFrame(() => Aos.refreshHard());
 
     // Recompute offsets once all images and fonts are fully loaded.
-    window.addEventListener('load', () => AOS.refreshHard(), { once: true });
-    // this.activeLink();
-
+    window.addEventListener('load', () => Aos.refreshHard(), { once: true });
   }
-  // activeLink(): void {
-  //   const sections: HTMLCollection = this.elem.nativeElement.parentElement.querySelectorAll('.navLink');
-  //   console.table(sections);
-
-  //   if (sections.length === 0) return
-  //   this.intersectionObserver = new IntersectionObserver(entries => {
-  //     entries.forEach(entry => {
-  //       if (entry.isIntersecting) {
-  //         this.activeNav = entry.target.id
-  //       }
-  //     })
-  //   })
-
-  //   Array.from(sections).forEach(section => {
-  //     this.intersectionObserver?.observe(section)
-  //   })
-  // }
 }
