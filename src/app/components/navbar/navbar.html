@@ -17,19 +17,19 @@
   >
     <ul class="lg:flex justify-evenly text-black/50">
       <li class="px-3 hover:text-black/90 active:hover:text-black/90" appBgGray>
-        <a class="p-2 transition-all activelink" [routerLink]="[]" fragment="benvenuti">Welcome</a>
+        <a class="p-2 transition-all activelink" [routerLink]="[]" fragment="benvenuti">{{translate('welcome')}}</a>
       </li>
       <li class="px-3 hover:text-black/90 active:hover:text-black/90" appBgGray>
-        <a class="p-2 transition-all" [routerLink]="[]" fragment="ristorante">Restaurant</a>
+        <a class="p-2 transition-all" [routerLink]="[]" fragment="ristorante">{{translate('restaurant')}}</a>
       </li>
       <li class="px-3 hover:text-black/90 active:hover:text-black/90" appBgGray>
-        <a class="p-2 transition-all" [routerLink]="[]" fragment="menu">Menu</a>
+        <a class="p-2 transition-all" [routerLink]="[]" fragment="menu">{{translate('menu')}}</a>
       </li>
       <li class="px-3 hover:text-black/90 active:hover:text-black/90" appBgGray>
-        <a class="p-2 transition-all" [routerLink]="[]" fragment="prenotazione">Reservation</a>
+        <a class="p-2 transition-all" [routerLink]="[]" fragment="prenotazione">{{translate('reservation')}}</a>
       </li>
       <li class="px-3 hover:text-black/90 active:hover:text-black/90" appBgGray>
-        <a class="p-2 transition-all" [routerLink]="[]" fragment="dove-siamo">Our Location</a>
+        <a class="p-2 transition-all" [routerLink]="[]" fragment="dove-siamo">{{translate('ourLocation')}}</a>
       </li>
       <li class="flex gap-2 lg:gap-0 items-center justify-start px-3">
         <a class="language px-2" rel="en-En"

@@ -1,23 +1,22 @@
 <footer class="mx-auto lg:max-w-285 font-normal my-7.5 items-center bg-[#f8f9fa] merienda">
   <div class="flex flex-col md:flex-row flex-wrap w-full items-center py-5 justify-center">
     <div class="text-center md:basis-[33.33%] flex items-center justify-center p-1">
-      <p>Follow us:</p>
+      <p>{{ translate('followUs') }}</p>
       <i class="fa-brands fa-square-facebook text-blue-600 text-2xl"></i>
       <i class="fa-brands fa-instagram text-pink-500 text-2xl"></i>
     </div>
     <div class="text-center md:basis-[33.33%] flex items-center justify-center p-1">
-      Copyright &copy; 2026
+      {{ translate('copyright') }}
     </div>
     <div class="text-center md:basis-[33.33%] flex items-center justify-center p-1">
-      Powered by: Angular
+      {{ translate('poweredBy') }}
     </div>
   </div>
 
   <div class="footer-disclaimer" role="note" aria-label="Website disclaimer">
-    <p class="footer-disclaimer__label">Demo project</p>
+    <p class="footer-disclaimer__label">{{ translate('demoProject') }}</p>
     <p class="footer-disclaimer__text">
-      This website is a demo under development. It is not a real restaurant and bookings or orders
-      may not be active.
+      {{ translate('demoDisclaimer') }}
     </p>
   </div>
 </footer>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslationService } from '../../services/translation.service';
 
 @Component({
   selector: 'app-prenotazione',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './prenotazione.css',
 })
 export class Prenotazione {
+  constructor(private translateService: TranslationService) {}
+  translate(word: string): string {
+    return this.translateService.translate(word);
+  }
 }
