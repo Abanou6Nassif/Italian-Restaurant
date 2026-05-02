@@ -12,10 +12,10 @@
     ></span>
   </div>
   <div
-    class="merienda text-[15px] sm:max-h-0 lg:max-h-auto overflow-hidden lg:flex lg:items-center"
+    class="merienda text-[1rem] sm:max-h-0 lg:max-h-auto overflow-hidden lg:flex lg:items-center"
     id="navbarText"
   >
-    <ul class="lg:flex justify-evenly text-black/50">
+    <ul class="lg:flex justify-evenly text-black/70">
       <li class="px-3 hover:text-black/90 active:hover:text-black/90" appBgGray>
         <a class="p-2 transition-all activelink" [routerLink]="[]" fragment="benvenuti">{{translate('welcome')}}</a>
       </li>
@@ -32,7 +32,7 @@
         <a class="p-2 transition-all" [routerLink]="[]" fragment="dove-siamo">{{translate('ourLocation')}}</a>
       </li>
       <li class="flex gap-2 lg:gap-0 items-center justify-start px-3">
-        <a class="language px-2 hover:cursor-pointer" rel="en-En"
+        <a class="language px-2 hover:cursor-pointer hover:bg-gray-500" rel="en-En"
           ><img src="it/images/english.ico" class="flag max-h-5 max-w-5" alt="English"
         /></a>
         <a class="language px-2 hover:cursor-pointer" rel="it-IT"

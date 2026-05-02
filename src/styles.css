@@ -14,6 +14,6 @@ html {
 }
 
 .activelink{
-  background-color: rgb(211, 211, 211);
+  background-color: #d3d3d3;
   color: rgba(0, 0, 0, 0.9);
 }
