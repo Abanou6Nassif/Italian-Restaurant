@@ -48,7 +48,6 @@ export class Navbar implements AfterViewInit, OnInit {
   activeLink(): void {
     const sections: HTMLCollection =
       this.elem.nativeElement.parentElement.querySelectorAll('.navLink');
-    console.table(sections);
 
     if (sections.length === 0) return;
     this.intersectionObserver = new IntersectionObserver((entries) => {
@@ -82,5 +81,12 @@ export class Navbar implements AfterViewInit, OnInit {
 
   translate(word: string): string {
     return this.translateService.translate(word);
+  }
+
+  logoClick() {
+    this.elem.nativeElement.querySelectorAll('a').forEach((link:HTMLAnchorElement) => {
+      link.classList.remove('activelink')
+    });;
+    this.elem.nativeElement.querySelector('.benvenuti').classList.add('activelink');
   }
 }

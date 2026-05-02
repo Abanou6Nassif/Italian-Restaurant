@@ -1,6 +1,6 @@
 <nav class="py-1.5 px-4 lg:flex justify-between items-center fixed top-0 left-0 right-0 z-100">
-  <div class="flex items-center justify-between max-lg">
-    <a class="flex justify-start items-center gap-2 py-1.25 text-[20px] merienda cursor-pointer">
+  <div class="flex items-center justify-between max-lg" >
+    <a class="flex justify-start items-center gap-2 py-1.25 text-[20px] merienda cursor-pointer" routerLink="" fragment="benvenuti" (click)="logoClick()">
       <img src="it/images/logo.png" alt="logo" class="h-12.5 w-12.5" />
       Italian Restaurant
     </a>
@@ -17,7 +17,7 @@
   >
     <ul class="lg:flex justify-evenly text-black/70">
       <li class="px-3 hover:text-black/90 active:hover:text-black/90" appBgGray>
-        <a class="p-2 transition-all activelink" [routerLink]="[]" fragment="benvenuti">{{translate('welcome')}}</a>
+        <a class="p-2 transition-all activelink benvenuti" [routerLink]="[]" fragment="benvenuti">{{translate('welcome')}}</a>
       </li>
       <li class="px-3 hover:text-black/90 active:hover:text-black/90" appBgGray>
         <a class="p-2 transition-all" [routerLink]="[]" fragment="ristorante">{{translate('restaurant')}}</a>
